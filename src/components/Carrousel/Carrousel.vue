@@ -75,7 +75,7 @@
 		hasDots: Boolean,
 		sliderTransition: Number,
 	})
-	console.log({ images, time, width, height, slideControl, hasDots, sliderTransition })
+	// console.log({ images, time, width, height, slideControl, hasDots, sliderTransition })
 	const currentimage = ref(0) // Use a ref to track the currentimage image index
 	const isSliding = ref(true)
 	const imageClass = ref(' ' + `h-[${height}px] w-[${width}px]`)
