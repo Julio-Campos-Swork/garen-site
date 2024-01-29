@@ -1,8 +1,9 @@
-import { defineConfig } from 'astro/config'
-import tailwind from '@astrojs/tailwind'
-import vue from '@astrojs/vue'
+import { defineConfig } from 'astro/config';
+import tailwind from '@astrojs/tailwind';
+import vue from '@astrojs/vue';
+import icon from 'astro-icon';
 
-import icon from 'astro-icon'
+import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,7 +13,8 @@ export default defineConfig({
     defaultLocale: 'es',
     locales: ['es', 'en'],
     routing: {
-      prefixDefaultLocale: false,
-    },
+      prefixDefaultLocale: false
+    }
   },
-})
+  adapter: vercel()
+});
