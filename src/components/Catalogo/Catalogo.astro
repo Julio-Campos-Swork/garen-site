@@ -1,0 +1,14 @@
+---
+import PDF_ES from '@public/Catalogo-web.pdf'
+import PDF_EN from '@public/Catalogue-web-en.pdf'
+const { currentLocale } = Astro
+let displayPDF = null
+
+currentLocale === "es" ? displayPDF = PDF_ES : displayPDF = PDF_EN
+
+---
+
+    <div class="flex justify-center m-auto px-16 py-16">
+
+        <embed src={displayPDF} type="application/pdf" width="100%" height="600px" /> 
+    </div>

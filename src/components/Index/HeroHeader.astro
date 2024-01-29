@@ -1,0 +1,81 @@
+---
+import { getI18N } from '@i18n/index'
+import Carrousel from '@components/Carrousel/Carrousel.vue'
+
+//imagenes español
+import imageAcrilicosES from '@public/slider/00-acrilicos-es.webp'
+import imageLaminaES from '@public/slider/01-lamina.webp'
+import imagePoliES from '@public/slider/02-gran-es.webp'
+import imagePadES from '@public/slider/03-pad-es.webp'
+import imageCanES from '@public/slider/04-can-es.webp'
+import imageLamES from '@public/slider/05-lam-es.webp'
+import imageTuboES from '@public/slider/06-TuboGaren.webp'
+import image07ES from '@public/slider/07-Lamina.webp'
+
+//imagenes ingles
+import imageLaminaEN from '@public/slider/01-lamina.webp'
+import imagePoliEN from '@public/slider/02-gran-en.webp'
+import imagePadEN from '@public/slider/03-pad-en.webp'
+import imageCanEN from '@public/slider/04-can-en.webp'
+import imageLamEN from '@public/slider/05-lam-en.webp'
+import imageTuboEN from '@public/slider/06-TuboGaren.webp'
+import image07EN from '@public/slider/07-Lamina.webp'
+
+
+const imagesES = [
+  {src: imageAcrilicosES.src, altText: "image Acrilicos"},
+  {src: imageLaminaES.src, altText: "image Lamina"},
+  {src: imagePoliES.src, altText: "image Policarbonato"},
+  {src: imagePadES.src, altText: "image Pad"},
+  {src: imageCanES.src, altText: "image Can"},
+  {src: imageLamES.src, altText: "image Laminna"},
+  {src: imageTuboES.src, altText: "image TuboGaren"},
+  {src: image07ES.src, altText: "image Acrilico"},
+]
+const imagesEN = [
+  {src: imageLaminaEN.src, altText: "image Lamina"},
+  {src: imagePoliEN.src, altText: "image Policarbonato"},
+  {src: imagePadEN.src, altText: "image Pad"},
+  {src: imageCanEN.src, altText: "image Can"},
+  {src: imageLamEN.src, altText: "image Laminna"},
+  {src: imageTuboEN.src, altText: "image TuboGaren"},
+  {src: image07EN.src, altText: "image Acrilico"},
+]
+let imagesCarrousel = null
+const {currentLocale} = Astro
+const i18n = getI18N({ currentLocale })
+
+currentLocale === 'es' ? imagesCarrousel = imagesES : imagesCarrousel = imagesEN
+
+---
+
+<Carrousel
+  images={imagesCarrousel}
+  time={4000}
+  width={1280}
+  height={427}
+  slideControl={true}
+  hasDots={true}
+  sliderTransition={100}
+  client:only
+/>
+
+<div class="bg-black/50 w-full grid grid-cols-1 md:grid-cols-2 px-10 lg:px-28">
+  <div class="flex flex-col space-y-6">
+    <h2 class=" text-white text-xl lg:text-3xl font-bold pt-16 text-center md:text-start">
+      {i18n.INDEX.TITLE_1} <br />
+      {i18n.INDEX.TITLE_2} 
+    </h2>
+    <p class="text-white  text-base md:text-lg lg:text-xl text-pretty tracking-tighter w-full  text-center md:text-start max-w-xl">
+      {i18n.INDEX.TEXT_1}
+    </p>
+    <p class="text-white  text-base md:text-lg lg:text-xl text-pretty w-full tracking-tighter text-center md:text-start max-w-xl">
+      {i18n.INDEX.TEXT_2}
+      
+    </p>
+    <p class="text-white text-base md:text-lg lg:text-xl text-center ">{i18n.INDEX.HASHTAG}</p>
+<div class="flex justify-center py-16">
+    <button class="generalButton">{i18n.INDEX.BTNCONOCE}</button>
+</div>
+  </div>
+</div>

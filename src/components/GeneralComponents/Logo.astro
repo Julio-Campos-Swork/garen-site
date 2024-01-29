@@ -1,0 +1,15 @@
+---
+import Logo from '@public/logo.png'
+import { Image } from 'astro:assets'
+const { currentLocale } = Astro
+---
+
+<div class="flex ml-4 mt-2">
+  <a href={currentLocale == 'es' ? '/' : '/en'} aria-label="Ir al inicio"
+    ><Image
+      src={Logo}
+      alt="Logotipo Hotel del Angel"
+      class="w-36"
+    /></a
+  >
+</div>

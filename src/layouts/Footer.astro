@@ -1,0 +1,92 @@
+---
+import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets';
+import industria from '@public/industria.png'
+import ance from '@public/ance.png'
+import { getI18N } from '@i18n/index'
+import { LOCALES_LINKS } from '@data/Locales';
+const {currentLocale} = Astro
+const i18n = getI18N({ currentLocale })
+const currentNavLinks = LOCALES_LINKS[currentLocale]
+--- 
+
+<div class="bg-black flex flex-col px-2 lg:px-16">
+  
+  <!-- complementos -->
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+    <div class="flex flex-col py-3 pl-3">
+      <p class="py-3 text-lg md:text-2xl text-[#d59c12]">{i18n.FOOTER.MATRIX}</p>
+      <p class="text-white">
+        {i18n.FOOTER.MATRIX_TEXT}
+      </p>
+      <div class="flex flex-col py-3">
+        <p class="py-3 text-lg md:text-2xl text-[#d59c12]">
+          {i18n.FOOTER.PHONES_TITLE}
+        </p>
+        <div class="grid grid-cols-2">
+          <p class="text-white">
+            412 70 07 <br />
+            412 70 89 <br />
+            412 70 92 <br />
+          </p>
+          <p class="text-white">
+            412 70 88 <br />
+            412 70 60 <br />
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-col py-3">
+        <p class="py-3 text-lg md:text-2xl text-[#d59c12]">{i18n.FOOTER.LADA_TITLE}</p>
+        <p class="text-white">
+          800 090 2222 <br />
+          contacto@garen.com.mx <br />
+        </p>
+      </div>
+    </div>
+
+    <!-- segunda columna -->
+    <div class="flex flex-col px-3 py-3">
+      <div class="flex flex-col">
+        <p class="py-3 text-lg md:text-2xl text-[#d59c12]">{i18n.FOOTER.FOLLOW_US}</p>
+        <div class="flex gap-3">
+          <Icon name="mdi:instagram" color="white" size={50} />
+          <Icon name="mdi:youtube" color="white" size={50} />
+        </div>
+      </div>
+      <div class="flex flex-col py-8 md:py-6">
+        <p class="py-3 text-lg md:text-2xl text-[#d59c12]">{i18n.FOOTER.VACANCY_TITLE}</p>
+        <p class="text-white py-3">{i18n.FOOTER.VACANCY_TEXT}</p>
+        <div >
+
+            <a href="/vacantes"><button class="generalButton">{i18n.FOOTER.VACANCY_BUTTON}</button></a>
+        </div>
+      </div>
+    </div>
+    <!-- tercera -->
+    <div class="py-6 px-6">
+        <ul>
+            <a href={currentNavLinks.ABOUT}><li class="text-white text-lg font-bold py-1.5">{i18n.FOOTER.NAVIGATION_TEXT.ABOUT}</li></a>
+            <a href={currentNavLinks.PRODUCTOS}><li class="text-white text-lg font-bold py-1.5">{i18n.FOOTER.NAVIGATION_TEXT.PRODUCTS}</li></a>
+            <a href={currentNavLinks.CATALOGO}><li class="text-white text-lg font-bold py-1.5">{i18n.FOOTER.NAVIGATION_TEXT.CATALOGUE}</li></a>
+            <a href={currentNavLinks.SUCURSALES}><li class="text-white text-lg font-bold py-1.5">{i18n.FOOTER.NAVIGATION_TEXT.WAREHOUSES}</li></a>
+            <a href={currentNavLinks.CONTACTO}><li class="text-white text-lg font-bold py-1.5">{i18n.FOOTER.NAVIGATION_TEXT.CONTACT}</li></a>
+        </ul>
+    </div>
+    <!-- cuarta -->
+    <div class="flex flex-col py-3 px-3">
+      <p class="py-3 text-lg md:text-2xl text-[#d59c12]">{i18n.FOOTER.CERTIFICATION_TITLE}</p>
+      <div class="flex justify-center gap-3 py-3">
+        <Image src={industria} alt='certificacion industrial' width={70} />
+        <Image src={ance} alt='certificacion ance' width={70} />
+
+      </div>
+      <a href="/aviso"><p class="text-right text-blue-500 py-4 ">{i18n.FOOTER.CERTIFICATION_TEXT_1}</p></a>
+      <p class="text-white py-1 text-sm text-right">{i18n.FOOTER.CERTIFICATION_TEXT_2}</p>
+      <p class="text-white text-sm text-right">{i18n.FOOTER.CERTIFICATION_TEXT_3}</p>
+    </div>
+  </div>
+</div>
+
+
+
+

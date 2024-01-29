@@ -1,0 +1,47 @@
+---
+import imagePad from '@public/productos/pad.webp'
+import imagePolicarbonato from '@public/productos/policarbonato.webp'
+import imageCanalada from '@public/productos/acanalada.webp'
+import imagePolicarboantoCelular from '@public/productos/policarboanto_celular.webp'
+import imageAcrilico from '@public/productos/acrilico.webp'
+import imagePoliestireno from '@public/productos/poliestireno.webp'
+import imageEnvolventes from '@public/productos/envolventes.webp'
+import imageManguera from '@public/productos/manguera.webp'
+import imageTuboGaren from '@public/productos/tubogaren.webp'
+import Carrousel from '@components/Carrousel/Carrousel.vue'
+import { getI18N } from '@i18n/index'
+
+const {currentLocale} = Astro
+const i18n = getI18N({ currentLocale })
+const imageProductos = [
+    {src: imagePad.src, altText: "Pad"},
+    {src: imagePolicarbonato.src, altText: "Policarbonato"},
+    {src: imageCanalada.src, altText: "Acanalada"},
+    {src: imagePolicarboantoCelular.src, altText: "Policarbonato Celular"},
+    {src: imageAcrilico.src, altText: "Acrilico"},
+    {src: imagePoliestireno.src, altText: "Poliestireno"},
+    {src: imageEnvolventes.src, altText: "Envolventes"},
+    {src: imageManguera.src, altText: "Manguera"},
+    {src: imageTuboGaren.src, altText: "Tubo Garen"},
+    
+
+]
+---
+
+<div class=" px-4 lg:px-28 py-16 flex flex-col">
+    <h1 class="text-center text-xl lg:text-3xl py-12 uppercase">{i18n.PRODUCTS_INDEX.TITLE}</h1>
+    <!-- <div class="m-auto"> -->
+        <Carrousel images={imageProductos} time={2000} slideControl={true} width={200} height={200} hasDots={false} sliderTransition={70} client:only />
+        <!-- </div> -->
+    </div>
+    <div class="principalBGColor grid grid-cols-1 md:grid-cols-3 md:items-center">
+        <p class="text-white text-center md:text-start text-base lg:text-lg font-bold py-6 px-4 max-w-96">
+          {i18n.PRODUCTS_INDEX.SUBTITLE_TEXT_1}
+        </p>
+        <p class="py-1 md:py-6 text-black text-lg m-auto font-semibold">
+            {i18n.PRODUCTS_INDEX.SUBTITLE_TEXT_2}
+        </p>
+        <div class="py-6 px-4 m-auto">
+          <button class="verSucursales"> {i18n.PRODUCTS_INDEX.BUTTON_TEXT}</button>
+        </div>
+      </div>

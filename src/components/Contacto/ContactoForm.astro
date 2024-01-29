@@ -1,0 +1,108 @@
+---
+import { getI18N } from '@i18n/index'
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+// export const prerender = false;
+if (Astro.request.method === "POST") {
+  try {
+      const data = await Astro.request.formData();
+      const username = data.get("username")
+      const email = data.get("email")
+      const product = data.get("product")
+      const country = data.get("country")
+      const phone = data.get("phone")
+      const message = data.get("message")
+    // Do something with the data
+    console.log({username, email, product, country,phone, message})
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
+---
+<div class="w-full text-gray-600  bg-white pb-16 pt-12">
+    <div class="pt-12 w-full px-8 md:px-14 lg:px-24 2xl:px-32 mx-auto">
+      <form 
+      method="POST"
+        class="space-y-5"
+      >
+        <div class="flex flex-col items-center gap-y-5 gap-x-6 [&>*]:w-full sm:flex-row">
+          <div>
+            <label class="font-medium">
+              {i18n.CONTACT.FORM.NAME}
+            </label>
+            <input name="username"
+              type="text"
+              required
+              class="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+            />
+          </div>
+          
+        </div>
+        <div>
+          <label class="font-medium">
+            {i18n.CONTACT.FORM.EMAIL}
+
+          </label>
+          <input name="email"
+            type="email"
+            required
+            class="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+          />
+        </div>
+        <div>
+          <label class="font-medium">
+            {i18n.CONTACT.FORM.PRODUCT}
+
+          </label>
+          <input name="product"
+            type="text"
+            required
+            class="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+          />
+        </div>
+        <div>
+          <label class="font-medium">
+            {i18n.CONTACT.FORM.LOCATION}
+
+          </label>
+          <input name="country"
+            type="text"
+            required
+            class="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+          />
+        </div>
+        <div>
+          <label class="font-medium">
+            {i18n.CONTACT.FORM.PHONE}
+          </label>
+          <div class="relative mt-2">
+            
+            <input name="phone"
+              type="number"
+              placeholder="+52 (555) 000-000"
+              required
+              minlength="10"
+              class="w-full pl-2  pr-3 py-2 appearance-none bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+            />
+          </div>
+        </div>
+        <div>
+          <label class="font-medium">
+            {i18n.CONTACT.FORM.MESSAGE}
+          </label>
+          <textarea  name="message" class="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"></textarea>
+        </div>
+        <div class="flex justify-center">
+
+            <button type="submit"
+            class="w-1/4 px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
+            >
+            {i18n.CONTACT.FORM.BUTTON_SEND}
+            
+        </button>
+    </div>
+      </form>
+    </div>
+  </div>

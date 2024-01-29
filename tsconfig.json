@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "paths": {
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@data/*": [
+        "src/data/*"
+      ],
+      "@composables/*": [
+        "src/composables/*"
+      ],
+      "@layouts/*": [
+        "src/layouts/*"
+      ],
+      "@styles/*": [
+        "src/styles/*"
+      ],
+      "@public/*":[
+        "public/*"
+      ],
+      "@i18n/*":[
+        "src/i18n/*"
+      ]
+    },
+    "jsxImportSource": "react"
+  },
+  "extends": "astro/tsconfigs/base"
+}

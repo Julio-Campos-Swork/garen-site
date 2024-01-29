@@ -1,0 +1,30 @@
+---
+import { Icon } from 'astro-icon/components'
+import { LOCALES_LINKS } from '@data/Locales.js';
+const {currentLocale} = Astro
+const url = Astro.url;
+
+
+function getLocalizedPath(locale: string, path: string) {
+  const currentLocalePaths = LOCALES_LINKS[currentLocale];
+  const pathInLocale = Object.keys(currentLocalePaths).find(key => currentLocalePaths[key] === path);
+
+  if (!pathInLocale) {
+    return path; // Si no se encuentra la ruta en el idioma actual, devolvemos la ruta original
+  }
+
+  const newPath = LOCALES_LINKS[locale][pathInLocale];
+  return newPath;
+}
+const newPath = getLocalizedPath(currentLocale == "es" ? "en" : "es", url.pathname)
+---
+
+<div class="flex flex-col gap-1 px-2 pt-3">
+    <p class="text-sm 2xl:text-xl">{currentLocale === "es" ? "Change leanguaje" : "Cambiar Idioma"}</p>
+    <div class="flex justify-center">
+      <a href={newPath} >
+
+        <Icon name={currentLocale === "es" ? "usa" : "mex"} size={20} aria-label='cambiar lenguaje' />
+      </a>
+    </div>
+  </div>

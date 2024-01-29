@@ -1,0 +1,143 @@
+{
+  "HEADERS": {
+    "INDEX_SEO_TITLE": "Garen | Inicio",
+    "INDEX_SEO_DESCRIPTION": "Bienvenidos a Plasticos Especiales Garen SA de CV",
+    "ABOUT_SEO_TITLE": "Garen | Nosotros",
+    "ABOUT_SEO_DESCRIPTION": "Somos una empresa orgullosamente mexicana comprometida a brindarte productos de calidad a precios justos."
+  },
+  "NAVBAR": {
+    "INICIO": "Inicio",
+    "NOSOTROS": "Nosotros",
+    "PRODUCTOS": "Productos",
+    "CATALOGO": "Catálogo",
+    "SUCURSALES": "Sucursales",
+    "CONTACTO": "Contacto"
+  },
+  "FOOTER": {
+    "MATRIX": "Matriz",
+    "MATRIX_TEXT": "Cd. Ind. Xicohténcatl Tetla, Tlax.",
+    "PHONES_TITLE": "Teléfonos: Lada (241)",
+    "LADA_TITLE": "Lada sin costo",
+    "FOLLOW_US": "Síguenos",
+    "VACANCY_TITLE": "Bolsa de Trabajo",
+    "VACANCY_TEXT": "Únete a nuestro equipo de trabajo.",
+    "VACANCY_BUTTON": "Ver vacantes",
+    "NAVIGATION_TEXT": {
+      "ABOUT": "Nosotros",
+      "PRODUCTS": "Productos",
+      "CATALOGUE": "Catálogo",
+      "WAREHOUSES": "Sucursales",
+      "CONTACT": "Contacto"
+    },
+    "CERTIFICATION_TITLE": "Certificaciones",
+    "CERTIFICATION_TEXT_1": "Aviso de privacidad",
+    "CERTIFICATION_TEXT_2": "Todos los derechos reservados © 2019",
+    "CERTIFICATION_TEXT_3": "Plásticos Especiales GAREN S.A. de C.V."
+  },
+  "INDEX": {
+    "TITLE_1": "MÁS DE 30 AÑOS",
+    "TITLE_2": "DE EXPERIENCIA NOS RESPALDAN",
+    "TEXT_1": "Fabricamos y distribuimos láminas de Acrílico CELL CAST, Láminas de Policarbonato, Poliestireno, Poliducto Corrugado para instalaciones eléctricas y Tubería de Polipropileno para conducción de agua, así como Láminas de PVC espumado.",
+    "TEXT_2": "Nuestro compromiso es contigo, a fin de brindarte productos con la más alta calidad, por esta razón invertimos en dos líneas de extrusión de lámina celular y lámina acanalada de policarbonato de última generación.",
+    "HASHTAG": "#SomosGaren",
+    "BTNCONOCE": "Conoce más",
+    "BTNVER": "Ver producto"
+  },
+  "PRODUCTS_INDEX": {
+    "TITLE": "Productos",
+    "SUBTITLE_TEXT_1": "CONTAMOS CON 28 SUCURSALES EN TODA LA REPÚBLICA MEXICANA",
+    "SUBTITLE_TEXT_2": "Encuentra tu sucursal más cercana",
+    "BUTTON_TEXT": "Ver Sucursales"
+  },
+  "ABOUT": {
+    "TITLE": {
+      "PART_1": "ACERCA DE",
+      "PART_2": "NOSOTROS"
+    },
+    "SLOGAN": "Somos una empresa orgullosamente mexicana comprometida a brindarte productos de calidad a precios justos.",
+    "MISSION": {
+      "TITLE": "MISIÓN",
+      "CONTENT": "Proporcionar a nuestros clientes productos de la más alta calidad en plásticos para la construcción y decoración, innovando nuestros procesos y productos a fin de satisfacer sus necesidades."
+    },
+    "VISION": {
+      "TITLE": "VISIÓN",
+      "CONTENT": "Ser lider en la fabricación y distribución de plásticos en México, elaborando productos en tiempo y forma de acuerdo a las necesidades de nuestro mercado e incursionar en países de América Latina."
+    },
+    "VALUES": {
+      "TITLE": "VALORES",
+      "CONTENT": {
+        "1": "Respeto",
+        "2": "Honestidad",
+        "3": "Lealtad",
+        "4": "Humildad",
+        "5": "Equidad"
+      }
+    },
+    "GAREN": {
+      "TITLE": "ACTUALMENTE GAREN CUENTA CON:",
+      "BRANCHS": "28 sucursales en toda la República Mexicana",
+      "PRODUCTS": "9 productos",
+      "INOVATION": "Seguimos innovando continuamente"
+    }
+  },
+  "404": {
+    "TITLE": "404",
+    "SUBTITLE": "Uh-oh!",
+    "BODY": "La página que estas buscando no existe.",
+    "BUTTON": "Volver al inicio"
+  },
+  "CATALOGUE": {
+    "TITLE": "Garen | Catalogo",
+    "DESCRIPTION": "Fabricamos y distribuimos láminas de Acrílico, Láminas de Policarbonato, Poliestireno, Poliducto Corrugado, Tubería de Polipropileno y Láminas de PVC espumado."
+  },
+  "CONTACT": {
+    "SEO_TITLE": "Garen | Contacto",
+    "DESCRIPTION": "Fabricamos y distribuimos láminas de Acrílico, Láminas de Policarbonato, Poliestireno, Poliducto Corrugado, Tubería de Polipropileno y Láminas de PVC espumado.",
+    "TITLE": "Contacto",
+    "FORM": {
+      "NAME": "Nombre Completo *",
+      "EMAIL": "Correo Electrónico *",
+      "PHONE": "Teléfono *",
+      "PRODUCT": "¿Producto de interés? *",
+      "LOCATION": "¿De dónde nos escribes? *",
+      "MESSAGE": "Mensaje ",
+      "NOTICE": "* Los campos son obligatorios",
+      "BUTTON_SEND": "Enviar"
+    }
+  },
+  "PRODUCTS": {
+    "SEO_TITLE": "Garen | Productos",
+    "SEO_DESCRIPTION": "Fabricamos y distribuimos láminas de Acrílico, Láminas de Policarbonato, Poliestireno, Poliducto Corrugado, Tubería de Polipropileno y Láminas de PVC espumado.",
+    "TITLE": "Productos",
+    "PRODUCT_LIST": {
+      "POLICARBONATO_CELULAR": "POLICARBONATO CELULAR",
+      "LAMINA_ACANALADA": "LÁMINA ACANALADA",
+      "POLICARBONATO_SOLIDO": "POLICARBONATO SÓLIDO",
+      "ACRILICO": "ACRÍLICO",
+      "POLIESTIRENO": "POLIESTIRENO",
+      "ENVOLVENTES_DIFUSORES_LUZ": "ENVOLVENTES Y DIFUSORES DE LUZ",
+      "POLIDUCTO_CORRUGADO": "POLIDUCTO CORRUGADO",
+      "TUBOGAREN": "TUBOGAREN",
+      "PAD": "PAD"
+    },
+    "PRODUCT_DETAILS": {
+      "POLICARBONATO_CELULAR": {
+        "TITLE": "POLICARBONATO CELULAR",
+        "SUBTITLE": "Características",
+        "SPECIFICATION_LIST": [
+          "Alta Resistencia a los impactos (200 veces más que el vidrio)",
+          "Flexibilidad de Diseño",
+          "Liviano (50% más que el vidrio)",
+          "Alta transmisión de luz",
+          "6 Colores disponibles",
+          "Autoextinguible"
+        ],
+        "SHEETS": {
+          "TITLE": "MEDIDAS",
+          "SHEETS_LITS": ["12.20 x 1.22 m.", "12.20 x 1.83 m.", "12.20 x 2.10 m."],
+          "BUTTON_SHEET": "Ficha Técnica"
+        }
+      }
+    }
+  }
+}

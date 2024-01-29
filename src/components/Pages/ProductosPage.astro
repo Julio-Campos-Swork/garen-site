@@ -1,0 +1,14 @@
+---
+import Layout from '@layouts/Layout.astro';
+import HeroComponent from "@components/GeneralComponents/HeroComponent.astro";
+import ProductImage from '@public/productos/banner.webp'
+import Productos from '@components/Productos/Productos.astro';
+import { getI18N } from '@i18n/index'
+const {currentLocale} = Astro
+const i18n = getI18N({ currentLocale })
+---
+
+<Layout title={i18n.PRODUCTS.SEO_TITLE} description={i18n.PRODUCTS.SEO_DESCRIPTION}>
+    <HeroComponent image={ProductImage} altText="Image productos" titleText={i18n.PRODUCTS.TITLE} />
+    <Productos />
+</Layout>

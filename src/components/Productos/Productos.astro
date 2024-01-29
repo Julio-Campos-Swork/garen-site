@@ -1,0 +1,17 @@
+---
+import { getI18N } from '@i18n/index'
+import { Image } from 'astro:assets'
+import { getImageProductos } from '@data/productList.js'
+const {currentLocale} = Astro
+const i18n = getI18N({ currentLocale })
+const productList = getImageProductos(i18n)
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-4 py-12 px-2 md:px-4 bg-white">
+{productList.map(item => (
+    <div class="flex flex-col">
+        <Image src={item.src} alt={item.altText} />
+        <p class="py-4 text-center  text-lg lg:text-xl 2xl:text-2xl font-bold">{item.title}</p>
+        </div>
+))}
+</div>

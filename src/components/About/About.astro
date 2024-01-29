@@ -1,0 +1,86 @@
+---
+import nosotroImage from '@public/nosotros/nosotros.jpg'
+import mapImage from '@public/nosotros/mapa.png'
+import mapMano from '@public/nosotros/mano.png'
+import mapLamina from '@public/nosotros/lamina.png'
+import historiaEs from '@public/nosotros/historia-es.png'
+import historiaEn from '@public/nosotros/historia-en.png'
+import historiaSM_ES from '@public/nosotros/sm-es.png'
+import historiaSM_EN from '@public/nosotros/sm-en.png'
+import historiaXS_ES from '@public/nosotros/xs-x-es.png'
+import historiaXS_EN from '@public/nosotros/xs-x-en.png'
+import { Image } from 'astro:assets';
+
+import { getI18N } from '@i18n/index'
+import { Icon } from 'astro-icon/components';
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+let currentHistoria = null
+currentLocale === 'es' ? currentHistoria = historiaEs : currentHistoria = historiaEn
+
+let currentHistoriaSM = null
+currentLocale === 'es' ? currentHistoriaSM = historiaSM_ES : currentHistoriaSM = historiaSM_EN
+
+let currentHistoriaXS = null
+currentLocale === 'es' ? currentHistoriaXS = historiaXS_ES : currentHistoriaXS = historiaXS_EN
+
+---
+
+<section id="about">
+  <div class="w-full h-full relative">
+    <Image src={nosotroImage} class='object-cover h-[250px] md:h-full' alt="image about" />
+    <div class="absolute top-8 left-36 md:top-14 md:left-10 flex flex-col ">
+      <h1 class="text-2xl md:text-4xl lg:text-6xl text-white font-bold tracking-wider">{i18n.ABOUT.TITLE.PART_1}</>
+      <h2 class="text-2xl md:text-4xl lg:text-6xl text-[#d59c12] font-bold tracking-wider">{i18n.ABOUT.TITLE.PART_2}</h2>
+    </div>
+  </div>
+  <div class="bg-gray-100 w-full px-6 md:px-24 pt-16 h-full">
+    <h3 class="py-8 text-center text-lg 2xl:text-3xl">{i18n.ABOUT.SLOGAN}</h3>
+    <div class="py-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+      <div class="flex flex-col ">
+        <p class="text-center uppercase text-[#d59c12]  text-xl md:text-2xl lg:text-4xl font-bold">{i18n.ABOUT.MISSION.TITLE}</p>
+        <p class="text-center  text-pretty py-6 text-base 2xl:text-2xl px-4">{i18n.ABOUT.MISSION.CONTENT}</p>
+      </div>
+      <div class="flex flex-col ">
+        <p class="text-center uppercase text-[#d59c12]  text-xl md:text-2xl lg:text-4xl font-bold">{i18n.ABOUT.VISION.TITLE}</p>
+        <p class="text-center  text-pretty py-6 text-base 2xl:text-2xl px-4">{i18n.ABOUT.VISION.CONTENT}</p>
+      </div>
+      <div class="flex flex-col ">
+        <p class="text-center uppercase text-[#d59c12] text-xl md:text-2xl lg:text-4xl font-bold">{i18n.ABOUT.VALUES.TITLE}</p>
+        <ul class="py-6 grid grid-cols-2 gap-3 lg:block lg:m-auto">
+          <li class="text-lg px-4 lg:px-12 2xl:text-2xl"><span class=" mr-2 text-[#d59c12] font-bold">&#62;</span> {i18n.ABOUT.VALUES.CONTENT[2]}</li>
+          <li class="text-lg px-4 lg:px-12 2xl:text-2xl"><span class=" mr-2 text-[#d59c12] font-bold">&#62;</span> {i18n.ABOUT.VALUES.CONTENT[3]}</li>
+          <li class="text-lg px-4 lg:px-12 2xl:text-2xl"><span class=" mr-2 text-[#d59c12] font-bold">&#62;</span> {i18n.ABOUT.VALUES.CONTENT[4]}</li>
+          <li class="text-lg px-4 lg:px-12 2xl:text-2xl"><span class=" mr-2 text-[#d59c12] font-bold">&#62;</span> {i18n.ABOUT.VALUES.CONTENT[1]}</li>
+          <li class="text-lg px-4 lg:px-12 2xl:text-2xl"><span class=" mr-2 text-[#d59c12] font-bold">&#62;</span> {i18n.ABOUT.VALUES.CONTENT[5]}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- segunda parte -->
+  <div class=" w-full bg-white">
+
+    <Image src={currentHistoria} class='hidden lg:block py-6 px-4' alt='history image' />
+    <Image src={currentHistoriaSM} class='sm:hidden md:block lg:hidden py-6 px-4' alt='history image' />
+    <Image src={currentHistoriaXS} class='md:hidden py-6 px-4' alt='history image' />
+  </div>
+  <div class="flex flex-col m-auto py-28">
+    <h6 class="text-center uppercase text-[#d59c12]  text-xl md:text-2xl lg:text-4xl font-bold">{i18n.ABOUT.GAREN.TITLE}</h6>
+    <div class="grid grid-cols-1 md:flex justify-center gap-6">
+      <div class="md:flex md:flex-col items-center  pt-6">
+        <Image src={mapImage} class="w-[150px] h-[100px] m-auto" alt='map image' />
+        <p class="py-4 text-center text-xl md:max-w-56 px-3.5">{i18n.ABOUT.GAREN.BRANCHS}</p>
+      </div>
+      <div class="flex flex-col items-center  pt-6">
+        <Image src={mapLamina} class="w-[120px] h-[30px] m-auto" alt='lamina image' />
+        <p class="py-4 text-center text-xl md:max-w-56 px-3.5">{i18n.ABOUT.GAREN.PRODUCTS}</p>
+      </div>
+      <div class="flex flex-col items-center  pt-6">
+        <Image src={mapMano} class="w-[50px] h-[80px] m-auto" alt='inovation image' />
+        <p class="py-4 text-center text-xl md:max-w-56 px-3.5">{i18n.ABOUT.GAREN.INOVATION}</p>
+      </div>
+    </div>
+  </div>
+
+</section>

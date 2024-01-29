@@ -1,0 +1,101 @@
+---
+import { Icon } from 'astro-icon/components'
+import Logo from '@components/GeneralComponents/Logo.astro'
+import { getI18N } from '@i18n/index'
+import LenguajePicker from '@components/GeneralComponents/LenguajePicker.astro'
+import { LOCALES_LINKS } from '@data/Locales'
+const {currentLocale} = Astro
+const i18n = getI18N({ currentLocale })
+
+
+const currentNavLinks = LOCALES_LINKS[currentLocale]
+---
+
+<header id="header" class="w-full z-20 pb-1 md:pb-3 lg:pb-3">
+  
+  <div class="flex justify-between lg:justify-around pb-2 lg:py-2">
+    <Logo />
+    <div class="lg:hidden mt-1 grid items-center">
+      <Icon transition:persist
+        id="menubtn"
+        name="mdi:menu"
+        color="black"
+        size={48}
+        class="cursor-pointer w-24 z-10 transition-transform ease-in-out duration-500"
+      />
+    </div>
+    <div
+      id="menu" 
+      class="hidden rounded-lg absolute z-20 top-20 md:top-[73px] right-0 bg-black/60 lg:bg-transparent w-1/3 h-screen lg:h-auto justify-center mt-2 lg:relative lg:top-0 lg:w-auto lg:flex lg:flex-grow"
+    >
+      <div 
+        id="menu"
+        class="grid grid-cols-1 space-y-3 z-10 bg-transparent lg:flex lg:justify-between md:mt-2"
+      >
+        <p class="text-center text-xl text-white font-bold py-4 lg:hidden">
+          Menú
+        </p>
+        <a href={currentNavLinks.INDEX} aria-label="Inicio | Home" class="navlinks">{i18n.NAVBAR.INICIO}</a>
+        <a href={currentNavLinks.ABOUT} aria-label="Nosotros / About" class="navlinks"
+          >{i18n.NAVBAR.NOSOTROS}</a
+        >
+
+        <a href={currentNavLinks.PRODUCTOS} aria-label="Productos | Products" class="navlinks"
+        >{i18n.NAVBAR.PRODUCTOS}</a
+      >
+      <a href={currentNavLinks.CATALOGO} aria-label="Catalogo | Catalogue" class="navlinks">{i18n.NAVBAR.CATALOGO}</a
+      >
+      <a href={currentNavLinks.SUCURSALES} aria-label="Sucursales | Werehouses" class="navlinks"
+        >{i18n.NAVBAR.SUCURSALES}</a
+      >
+      <a href={currentNavLinks.CONTACTO} aria-label="Contacto | Contact" class="navlinks">{i18n.NAVBAR.CONTACTO}</a
+      >
+      </div>
+    </div>
+    <div class="hidden lg:flex">
+
+      <LenguajePicker />
+    </div>
+
+  </div>
+  <div class="flex lg:hidden justify-end">
+
+    <LenguajePicker />
+  </div>
+</header>
+<script is="global">
+  //header
+  document.getElementById('menubtn').addEventListener('click', openMenu)
+  function openMenu() {
+    let menu = document.getElementById('menu')
+    let menuBtn = document.getElementById('menubtn')
+    if (menu.classList.contains('hidden')) {
+      menu.classList.remove('hidden')
+    } else {
+      menu.classList.add('hidden')
+    }
+
+    if (menuBtn.classList.contains('hover:rotate-90')) {
+      menuBtn.classList.remove('hover:rotate-90')
+    } else {
+      menuBtn.classList.add('hover:rotate-90')
+    }
+    menu.addEventListener('click', closeMenu)
+    document.addEventListener('click', closeMenuOutside)
+  }
+  function closeMenuOutside(event) {
+    let menu = document.getElementById('menu')
+    let menuBtn = document.getElementById('menubtn')
+
+    if (!menu.contains(event.target) && event.target !== menuBtn) {
+      menu.classList.add('hidden')
+      menuBtn.classList.remove('hover:rotate-90')
+      document.removeEventListener('click', closeMenuOutside) // Remover el event listener una vez cerrado el menú
+    }
+  }
+  function closeMenu() {
+    let menu = document.getElementById('menu')
+
+    menu.classList.add('hidden')
+  }
+</script>

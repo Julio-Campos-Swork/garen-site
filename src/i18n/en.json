@@ -1,0 +1,125 @@
+{
+  "HEADERS": {
+    "INDEX_SEO_TITLE": "Garen | Index",
+    "INDEX_SEO_DESCRIPTION": "Welcome to Plasticos Especiales Garen SA de CV",
+    "ABOUT_SEO_TITLE": "Garen | About",
+    "ABOUT_SEO_DESCRIPTION": "We are a proudly Mexican company committed to providing quality products at fair prices."
+  },
+  "NAVBAR": {
+    "INICIO": "Home",
+    "NOSOTROS": "About",
+    "PRODUCTOS": "Products",
+    "CATALOGO": "Catalogue",
+    "SUCURSALES": "WareHouses",
+    "CONTACTO": "Contact"
+  },
+  "FOOTER": {
+    "MATRIX": "Head Quarters",
+    "MATRIX_TEXT": "Cd. Ind. Xicohténcatl Tetla, Tlax.",
+    "PHONES_TITLE": "Phone: Area Code +52 (241)",
+    "LADA_TITLE": "Free Lada",
+    "FOLLOW_US": "Follow us",
+    "VACANCY_TITLE": "Careers",
+    "VACANCY_TEXT": "Join our team.",
+    "VACANCY_BUTTON": "See vacancies",
+    "NAVIGATION_TEXT": {
+      "ABOUT": "About",
+      "PRODUCTS": "Products",
+      "CATALOGUE": "Catalogue",
+      "WAREHOUSES": "WereHouses",
+      "CONTACT": "Contact"
+    },
+    "CERTIFICATION_TITLE": "Certifications",
+    "CERTIFICATION_TEXT_1": "Privacy Notice",
+    "CERTIFICATION_TEXT_2": "All rights Reserved © 2019",
+    "CERTIFICATION_TEXT_3": "Plásticos Especiales GAREN S.A. de C.V."
+  },
+  "INDEX": {
+    "TITLE_1": "MORE THAN 30 YEARS",
+    "TITLE_2": "OF EXPERIENCE SUPPORT US",
+    "TEXT_1": "We manufacture and distribute CELL CAST Acrylic sheets, Polycarbonate Sheets, Polystyrene, Corrugated Pipe for electrical installations and Polypropylene Piping for water conduction, as well as Foamed PVC Sheets.",
+    "TEXT_2": "Our commitment is with you, in order to provide you the highest quality products, for this reason we invest in two lines of extrusion of cellular sheet and corrugated sheet of last generation polycarbonate.",
+    "HASHTAG": "#WeAreGaren",
+    "BTNCONOCE": "Know more",
+    "BTNVER": "See the product"
+  },
+  "PRODUCTS_INDEX": {
+    "TITLE": "Products",
+    "SUBTITLE_TEXT_1": "WE HAVE 28 BRANCHES OFFICES THROUGHOUT THE MEXICAN REPUBLIC",
+    "SUBTITLE_TEXT_2": "Find your nearest branch offices",
+    "BUTTON_TEXT": "See branch"
+  },
+  "ABOUT": {
+    "TITLE": {
+      "PART_1": "ABOUT",
+      "PART_2": "US"
+    },
+    "SLOGAN": "We are a proudly Mexican company committed to providing quality products at fair prices.",
+    "MISSION": {
+      "TITLE": "MISSION",
+      "CONTENT": "Provide our customers with the highest quality products in plastics for construction and decoration, innovating our processes and products in order to meet their needs."
+    },
+    "VISION": {
+      "TITLE": "VISION",
+      "CONTENT": "To be a leader in the manufacture and distribution of plastics in Mexico, developing products in a timely manner according to the needs of our market and venturing into Latin American countries."
+    },
+    "VALUES": {
+      "TITLE": "VALORES",
+      "CONTENT": {
+        "1": "RespetC",
+        "2": "Honesty",
+        "3": "Loyalty",
+        "4": "Humility",
+        "5": "Equity"
+      }
+    },
+    "GAREN": {
+      "TITLE": "CURRENTLY GAREN HAS:",
+      "BRANCHS": "28 ware houses Mexico",
+      "PRODUCTS": "9 products",
+      "INOVATION": "Continuously innovating"
+    }
+  },
+  "404": {
+    "TITLE": "404",
+    "SUBTITLE": "Uh-oh!",
+    "BODY": "The page you are looking for does not exist.",
+    "BUTTON": "Go to Home"
+  },
+  "CATALOGUE": {
+    "TITLE": "Garen | Catalogue",
+    "DESCRIPTION": "We manufacture and distribute Acrylic Sheets, Polycarbonate Sheets, Polystyrene, Corrugated Polyduct, Polypropylene Pipe and Foamed PVC Sheets."
+  },
+  "CONTACT": {
+    "SEO_TITLE": "Garen | Contact",
+    "DESCRIPTION": "We manufacture and distribute Acrylic Sheets, Polycarbonate Sheets, Polystyrene, Corrugated Polyduct, Polypropylene Pipe and Foamed PVC Sheets.",
+    "TITLE": "Contact",
+    "FORM": {
+      "NAME": "Full Name *",
+      "EMAIL": "Email *",
+      "PHONE": "Phone *",
+      "PRODUCT": "What product are you interested in? *",
+      "LOCATION": "Where do you write us from?",
+      "MESSAGE": "Message ",
+      "NOTICE": "* The fields are required",
+      "BUTTON_SEND": "Submit"
+    }
+  },
+  "PRODUCTS": {
+    "SEO_TITLE": "Garen | Products",
+    "SEO_DESCRIPTION": "We manufacture and distribute Acrylic Sheets, Polycarbonate Sheets, Polystyrene, Corrugated Polyduct, Polypropylene Pipe and Foamed PVC Sheets.",
+    "TITLE": "Products",
+    "PRODUCT_LIST":{
+      "POLICARBONATO_CELULAR": "PC MULTIWALL SHEET",
+      "LAMINA_ACANALADA": "PC CORRUGATED SHEET",
+      "POLICARBONATO_SOLIDO": "PC SOLID SHEET",
+      "ACRILICO": "CAST ACRYLIC SHEET",
+      "POLIESTIRENO": "PC SHEET",
+      "ENVOLVENTES_DIFUSORES_LUZ": "LIGHTING PANELS",
+      "POLIDUCTO_CORRUGADO": "CORRUGATED PIPE",
+      "TUBOGAREN": "TUBOGAREN PLUS",
+      "PAD": "PAD"
+
+    }
+  }
+}

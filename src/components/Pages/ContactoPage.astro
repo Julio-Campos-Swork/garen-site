@@ -1,0 +1,15 @@
+---
+import Layout from "@layouts/Layout.astro";
+import HeroComponent from "@components/GeneralComponents/HeroComponent.astro";
+import ContactoImage from '@public/nosotros/contacto.jpg'
+
+import { getI18N } from '@i18n/index'
+import ContactoForm from "@components/Contacto/ContactoForm.astro";
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+---
+
+<Layout title={i18n.CONTACT.SEO_TITLE} description={i18n.CONTACT.DESCRIPTION} >
+<HeroComponent image={ContactoImage} altText="image contacto" titleText={i18n.CONTACT.TITLE} />
+<ContactoForm />
+</Layout>
